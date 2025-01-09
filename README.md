@@ -7,6 +7,17 @@ A tool to detect prompt injection attacks using AI.
 ```bash
 git clone https://github.com/foggystar/clever_prompt_detector
 cd clever_prompt_detector
+```
+
+if you are using a virtual environment by conda, you can use the commands
+```bash
+conda create -n clever_detector python=3.9
+conda activate clever_detector
+conda install openai
+```
+
+else, you can use
+```bash
 pip install -e .
 ```
 

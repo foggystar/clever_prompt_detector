@@ -35,7 +35,7 @@ def judge_result():
     # print(response)
     # print("")
     # print(response.choices[0].message.content)
-    if(response.choices[0].message.content == "attack"):
-        return "Attacking!!!"
-    else:
+    if(response.choices[0].message.content == "not attack"):
         return result
+    else:
+        return "Attacking!!!"

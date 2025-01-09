@@ -5,6 +5,8 @@ import prompts
 def honeypot_result():
     honeypot = OpenAI(api_key=util.getDeepSeekKey(), base_url=util.getDeepSeekUrl())
 
+    # print(prompts.honeypot_sys)
+    # print(prompts.honeypot_user)
     response = honeypot.chat.completions.create(
         model="deepseek-chat",
         messages=[
@@ -13,14 +15,15 @@ def honeypot_result():
         ],
         stream=False
     )
-    print(response)
-
+    return response.choices[0].message.content
 
 def judge_result():
     judge = OpenAI(api_key=util.getDeepSeekKey(), base_url=util.getDeepSeekUrl())
 
-    prompts.judge_user = prompts.honeypot_user+honeypot_result()
-
+    result = honeypot_result()
+    prompts.judge_user = prompts.get_judge_user(honeypot_response=result, honeypot_user=prompts.honeypot_user)
+    # print(prompts.judge_sys)
+    # print(prompts.judge_user)
     response = judge.chat.completions.create(
         model="deepseek-chat",
         messages=[
@@ -29,6 +32,10 @@ def judge_result():
         ],
         stream=False
     )
-    print(response)
-    print("")
-    print(response.choices[0].message.content)
+    # print(response)
+    # print("")
+    # print(response.choices[0].message.content)
+    if(response.choices[0].message.content == "attack"):
+        return "Attacking!!!"
+    else:
+        return result

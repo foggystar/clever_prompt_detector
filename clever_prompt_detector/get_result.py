@@ -17,7 +17,7 @@ def honeypot_result():
     )
     return response.choices[0].message.content
 
-def judge_result():
+def judge_result(print_result_anytime=False):
     judge = OpenAI(api_key=util.getDeepSeekKey(), base_url=util.getDeepSeekUrl())
 
     result = honeypot_result()
@@ -34,7 +34,8 @@ def judge_result():
     )
     # print(response)
     # print("")
-    # print(response.choices[0].message.content)
+    if print_result_anytime:
+        print(result)
     if(response.choices[0].message.content == "not attack"):
         return result
     else:

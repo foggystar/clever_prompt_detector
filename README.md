@@ -11,6 +11,14 @@ pip install -e .
 ```
 
 ## Usage
+
+You need to first set your **DEEPSEEK_API_KEY** in your environment
+```bash
+export DEEPSEEK_API_KEY={Your_API_Key}
+```
+
+Then you can try this project by:
+
 ```python
 from clever_prompt_detector import get_result
 

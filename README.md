@@ -5,7 +5,7 @@ A tool to detect prompt injection attacks using AI.
 ## Installation
 
 ```bash
-git clone https://github.com/yourusername/clever_prompt_detector
+git clone https://github.com/foggystar/clever_prompt_detector
 cd clever_prompt_detector
 pip install -e .
 ```

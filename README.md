@@ -11,9 +11,8 @@ cd clever_prompt_detector
 
 if you are using a virtual environment by conda, you can use the commands
 ```bash
-conda create -n clever_detector python=3.9
+conda env create -f environment.yml
 conda activate clever_detector
-conda install openai
 ```
 
 else, you can use

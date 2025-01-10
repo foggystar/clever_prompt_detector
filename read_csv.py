@@ -12,9 +12,9 @@ def process_row(row, progress_counter, total_rows, ans):
         result = get_result.query(row['query'])
         ans.append([row['index'],row['query'],result[1],result[0]])
         if result[1]:
-            print(f"TRUE  {process_id}")
+            print(f"TRUE  ProcessID: {process_id}")
         else:
-            print(f"FALSE {process_id}")
+            print(f"FALSE ProcessID: {process_id}")
 
 def process_csv_file(csv_path, num_processes=50):
     """使用多进程读取并打印CSV文件，并显示进度。

@@ -25,7 +25,7 @@ def honeypot_result(prompt_user=""):
     # except APIConnectionError as e:
     #     print(f"API连接错误: {str(e)}")
     except Exception as e:
-        # print(f"未知错误: {str(e)}")
+        print(f"未知错误: {str(e)}")
         return "The honeypot is attacked"
 
 def query(prompt_user=""):

@@ -34,7 +34,7 @@ def process_csv_file(csv_path, num_processes=50):
     ans = manager.list()
     progress_counter = manager.Value('i', 0)  # 使用共享整数来跟踪进度
     with multiprocessing.Pool(processes=num_processes) as pool:
-        for i in range(50):
+        for i in range(df.index.stop):
             # 检查该行是否已被处理
             row = df.loc[i,:]
             row_tuple = tuple(row)

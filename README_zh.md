@@ -36,7 +36,10 @@ result = get_result.judge_result()
 print(result)
 ```
 
-执行demo **clever_prompt_detector/test.py**
+执行demo：
+```bash
+python clever_prompt_detector/test.py
+```
 
 ### 调整提示词
 

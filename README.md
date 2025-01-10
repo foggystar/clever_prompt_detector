@@ -15,7 +15,7 @@ conda env create -f environment.yml
 conda activate clever_detector
 ```
 
-else, you can use
+else, if you don't use a virtual environment, 
 ```bash
 pip install -e .
 ```
@@ -36,7 +36,10 @@ result = get_result.judge_result()
 print(result)
 ```
 
-You can also run **clever_prompt_detector/test.py** to see the demo
+See the demo:
+```bash
+python clever_prompt_detector/test.py
+```
 
 ### Adjust the prompts
 

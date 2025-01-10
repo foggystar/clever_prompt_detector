@@ -1,7 +1,6 @@
 import multiprocessing
 import pandas as pd
 from clever_prompt_detector import get_result
-import multiprocessing
 
 def process_row(row, progress_counter, total_rows, ans):
     """打印一行CSV数据并更新进度。"""

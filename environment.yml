@@ -5,5 +5,7 @@ dependencies:
   - python=3.9
   - pip
   - openai
+  - pandas
+  - multiprocess
   - pip:
     - -e .

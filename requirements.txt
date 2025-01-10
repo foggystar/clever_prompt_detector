@@ -1,1 +1,3 @@
 openai>=1.0.0
+multiprocess>=0.70.15
+pandas>=2.2.0

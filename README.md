@@ -32,13 +32,13 @@ Then you can try this project by:
 ```python
 from clever_prompt_detector import get_result
 
-result = get_result.judge_result()
+result = get_result.query()
 print(result)
 ```
 
 See the demo:
 ```bash
-python clever_prompt_detector/test.py
+python ./test.py
 ```
 
 ### Adjust the prompts

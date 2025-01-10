@@ -5,7 +5,9 @@ setup(
     version="0.1.0",
     packages=find_packages(),
     install_requires=[
-        "openai>=1.0.0"
+        "openai>=1.0.0",
+        "multiprocess>=0.70.15",
+        "pandas>=2.2.0"
     ],
     author="foggystar",
     description="A tool to detect prompt injection attacks",

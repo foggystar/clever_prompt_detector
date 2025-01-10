@@ -32,13 +32,13 @@ export DEEPSEEK_API_KEY="Your_API_Key"
 ```python
 from clever_prompt_detector import get_result
 
-result = get_result.judge_result()
+result = get_result.query()
 print(result)
 ```
 
 执行demo：
 ```bash
-python clever_prompt_detector/test.py
+python ./test.py
 ```
 
 ### 调整提示词

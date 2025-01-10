@@ -24,7 +24,7 @@ pip install -e .
 
 你需要在环境变量中设置 **DEEPSEEK_API_KEY**
 ```bash
-export DEEPSEEK_API_KEY={Your_API_Key}
+export DEEPSEEK_API_KEY="Your_API_Key"
 ```
 
 调用工具接口：
